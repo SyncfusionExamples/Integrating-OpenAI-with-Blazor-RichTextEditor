@@ -26,11 +26,12 @@
 
 ## Steps to do before the sample run
 
-* Open the `./src/Data/Constants.cs` file.
-* Replace your OpenAI License key in the `OPENAI_KEY` const variable.
+To get the app working, you’ll need an OpenAI API key. You can get one by [signing up](https://platform.openai.com/signup) for an account.
+
+* Open the `./src/Data/Constants.cs` file and set your OpenAI API key to `OPENAI_KEY` const.
 
 ```cs
 const string OPENAI_KEY = "Provide_Your_OpenAI_License_Key_Here";
 ```
 
-* Now, run the sample to see the OpenAI integration in Blazor RTE component.
+* Now, run the sample to see the OpenAI integration in Blazor RichTextEditor component.
