@@ -18,7 +18,7 @@ namespace BlazorRTEWithOpenAI.Pages
         private SfDropDownButton? dropDownButton;
         private SfContextMenu<ContextMenuItem>? contextMenu;
         private bool showSpinner = false;
-        private string Value { get; set; } = "<h1>The Olympics</h1>\r\n<p>The Olympics is an global multi sport event that takes place for every four years. Thousands of athletes from all over the world come together to compete in various sports and represent their countries.</p>\r\n<h2>History of Olympics</h2>\r\n<p>The Olympics date back to ancient Greece, where they were held to honor the god Zeus. The modern Olympics were first held in Athens, Greece in 1896 and have since grown to become one of the most prestigious sporting events in the world.</p>\r\n<h2>Popular Olympic Sports</h2>\r\n<p>Some of the most popular sports in Olympics include:</p>\r\n<ul>\r\n<li>Track and field</li>\r\n<li>Gymnastics</li>\r\n<li>Swimming</li>\r\n<li>Basketball</li>\r\n<li>Tennis</li>\r\n<li>Soccer</li>\r\n</ul>\r\n<p>The Olympics is a celebration of athleticism, sportsmanship, and international unity, and it continues to inspire people all over the world.</p>";
+        private string Value { get; set; } = "<p>The Olympics is a global multisport event that take place for every four year. Thousands of athletes from all over the world come together to compete in various sportss and represent their countries. The Olympics is a celebration of athleticism, sportsman ship, and international unity, and it continues to inspire people all over world.</p>";
 
         private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
         {
