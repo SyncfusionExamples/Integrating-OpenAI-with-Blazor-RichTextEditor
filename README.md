@@ -1,6 +1,6 @@
-# Integration-OpenAI-with-Blazor-RichTextEditor
+# Integration OpenAI with Blazor RichTextEditor
 
-## Available AI toolbar options integrated in RTE
+## Integrated AI toolbar options in Blazor RichTextEditor
 
 - Rephrase
   * Standard
@@ -26,7 +26,7 @@
 
 ## Steps to do before the sample run
 
-* Open the `./src/Pages/Index.razor.cs` file.
+* Open the `./src/Data/Constants.cs` file.
 * Replace your OpenAI License key in the `OPENAI_KEY` const variable.
 
 ```cs
