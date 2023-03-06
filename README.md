@@ -1,4 +1,4 @@
-# Integration OpenAI with Blazor RichTextEditor
+# Integrating OpenAI with Blazor RichTextEditor
 
 ## Integrated AI toolbar options in Blazor RichTextEditor
 
