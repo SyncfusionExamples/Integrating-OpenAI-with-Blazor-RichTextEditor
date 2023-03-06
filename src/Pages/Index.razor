@@ -14,9 +14,9 @@
                     <Template>
                         <SfDropDownButton @ref="@dropDownButton" Content="AI">
                             <PopupContent>
-                                <SfContextMenu @ref="@contextMenu" Items="AIMenuItems" TValue="ContextMenuItem" ShowItemOnClick="true">
+                                <SfContextMenu @ref="@contextMenu" Items="AIMenuItems" TValue="AIMenuItem" ShowItemOnClick="true">
                                     <MenuFieldSettings Text="Content"/>
-                                    <MenuEvents TValue="ContextMenuItem" Created="OnMenuCreated" ItemSelected="ItemSelected" />
+                                    <MenuEvents TValue="AIMenuItem" Created="OnMenuCreated" ItemSelected="ItemSelected" />
                                 </SfContextMenu>
                             </PopupContent>
                         </SfDropDownButton>

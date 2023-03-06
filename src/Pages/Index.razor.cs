@@ -16,7 +16,7 @@ namespace BlazorRTEWithOpenAI.Pages
         private HttpClient httpClient { get; set; }
 
         private SfDropDownButton? dropDownButton;
-        private SfContextMenu<ContextMenuItem>? contextMenu;
+        private SfContextMenu<AIMenuItem>? contextMenu;
         private bool showSpinner = false;
         private string Value { get; set; } = "<p>The Olympics is a global multisport event that take place for every four year. Thousands of athletes from all over the world come together to compete in various sportss and represent their countries. The Olympics is a celebration of athleticism, sportsman ship, and international unity, and it continues to inspire people all over world.</p>";
 
@@ -37,23 +37,23 @@ namespace BlazorRTEWithOpenAI.Pages
             new ToolbarItemModel() { Command = ToolbarCommand.Redo }
         };
 
-        private List<ContextMenuItem> AIMenuItems = new List<ContextMenuItem>{
-            new ContextMenuItem { Id ="RephraseContent", Content = "Rephrase" , Items = new List<ContextMenuItem> {
-                new ContextMenuItem { Content="Standard", Prompt = Constants.STANDARD },
-                new ContextMenuItem { Content="Formal", Prompt = Constants.FORMAL },
-                new ContextMenuItem { Content="Expand", Prompt = Constants.EXPAND },
-                new ContextMenuItem { Content="Shorten", Prompt = Constants.SHORTEN}
+        private List<AIMenuItem> AIMenuItems = new List<AIMenuItem>{
+            new AIMenuItem { Id ="RephraseContent", Content = "Rephrase" , Items = new List<AIMenuItem> {
+                new AIMenuItem { Content="Standard", Prompt = Constants.STANDARD },
+                new AIMenuItem { Content="Formal", Prompt = Constants.FORMAL },
+                new AIMenuItem { Content="Expand", Prompt = Constants.EXPAND },
+                new AIMenuItem { Content="Shorten", Prompt = Constants.SHORTEN}
             }},
-            new ContextMenuItem { Id ="ChangeContentTone", Content = "Change tone", Items = new List<ContextMenuItem> {
-                new ContextMenuItem { Content="Professional", Prompt = Constants.PROFESSIONAL },
-                new ContextMenuItem { Content="Casual", Prompt = Constants.CASUAL },
-                new ContextMenuItem { Content="Straightforward", Prompt = Constants.STRAIGHTFORWARD },
-                new ContextMenuItem { Content="Confident", Prompt = Constants.CONFIDENT},
-                new ContextMenuItem { Content="Friendly", Prompt = Constants.FRIENDLY },
+            new AIMenuItem { Id ="ChangeContentTone", Content = "Change tone", Items = new List<AIMenuItem> {
+                new AIMenuItem { Content="Professional", Prompt = Constants.PROFESSIONAL },
+                new AIMenuItem { Content="Casual", Prompt = Constants.CASUAL },
+                new AIMenuItem { Content="Straightforward", Prompt = Constants.STRAIGHTFORWARD },
+                new AIMenuItem { Content="Confident", Prompt = Constants.CONFIDENT},
+                new AIMenuItem { Content="Friendly", Prompt = Constants.FRIENDLY },
             }},
-            new ContextMenuItem { Separator = true },
-            new ContextMenuItem { Id ="CheckGrammar", Content = "Fix spelling & grammar", Prompt = Constants.GRAMMARCHECK},
-            new ContextMenuItem { Id ="Article", Content = "Convert to article", Prompt = Constants.CONVERTTOARTICLE }
+            new AIMenuItem { Separator = true },
+            new AIMenuItem { Id ="CheckGrammar", Content = "Fix spelling & grammar", Prompt = Constants.GRAMMARCHECK},
+            new AIMenuItem { Id ="Article", Content = "Convert to article", Prompt = Constants.CONVERTTOARTICLE }
         };
 
         public void OnMenuCreated()
@@ -61,7 +61,7 @@ namespace BlazorRTEWithOpenAI.Pages
             contextMenu?.Open();
         }
 
-        private async Task ItemSelected(MenuEventArgs<ContextMenuItem> args)
+        private async Task ItemSelected(MenuEventArgs<AIMenuItem> args)
         {
             if (string.IsNullOrEmpty(args.Item.Prompt))
                 return;

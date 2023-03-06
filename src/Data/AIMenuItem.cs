@@ -1,8 +1,8 @@
 ﻿namespace BlazorRTEWithOpenAI.Data
 {
-    public class ContextMenuItem
+    public class AIMenuItem
     {
-        public List<ContextMenuItem> Items { get; set; }
+        public List<AIMenuItem> Items { get; set; }
         public string Content { get; set; }
         public string Prompt { get; set; }
         public string Id { get; set; }
