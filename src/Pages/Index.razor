@@ -1,0 +1,29 @@
+﻿@page "/"
+@using Syncfusion.Blazor.RichTextEditor
+@using Syncfusion.Blazor.SplitButtons
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Spinner
+@using BlazorRTEWithOpenAI.Data
+
+<div class="control-section">
+    <SfRichTextEditor @bind-Value="@Value">
+        <RichTextEditorInlineMode Enable="false" ShowOnSelection="true" />
+        <RichTextEditorToolbarSettings Items="@Tools">
+            <RichTextEditorCustomToolbarItems>
+                <RichTextEditorCustomToolbarItem Name="AI">
+                    <Template>
+                        <SfDropDownButton @ref="@dropDownButton" Content="AI">
+                            <PopupContent>
+                                <SfContextMenu @ref="@contextMenu" Items="AIMenuItems" TValue="ContextMenuItem" ShowItemOnClick="true">
+                                    <MenuFieldSettings Text="Content"/>
+                                    <MenuEvents TValue="ContextMenuItem" Created="OnMenuCreated" ItemSelected="ItemSelected" />
+                                </SfContextMenu>
+                            </PopupContent>
+                        </SfDropDownButton>
+                    </Template>
+                </RichTextEditorCustomToolbarItem>
+            </RichTextEditorCustomToolbarItems>
+        </RichTextEditorToolbarSettings>
+    </SfRichTextEditor>
+    <SfSpinner @bind-Visible="@showSpinner"/>
+</div>
