@@ -39,3 +39,5 @@ const string OPENAI_KEY = "Provide_Your_OpenAI_License_Key_Here";
 ## See also
 
 [Getting Started with RichTextEditor in Blazor](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started)
+
+>Looking for the full Blazor Rich Text Editor component overview, features, pricing, and documentation? Visit the [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) page.
